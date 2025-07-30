@@ -1,3 +1,4 @@
+// TestContext.js
 import React, { createContext, useContext, useState, useCallback } from "react";
 
 const TestContext = createContext();
@@ -5,6 +6,7 @@ const TestContext = createContext();
 export const TestProvider = ({ children }) => {
   const questions = [
     {
+      "id": 1, // Added ID
       "question": "Synonym of “benevolent”:",
       "options": [
         "Cruel",
@@ -16,6 +18,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 2, // Added ID
       "question": "Antonym of “Transparent”:",
       "options": [
         "Opaque",
@@ -27,6 +30,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 3, // Added ID
       "question": "Correct spelling:",
       "options": [
         "Comitte",
@@ -38,6 +42,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 4, // Added ID
       "question": "He is good ___ mathematics.",
       "options": [
         "in",
@@ -49,6 +54,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 5, // Added ID
       "question": "Correct sentence:",
       "options": [
         "He don’t likes tea.",
@@ -60,6 +66,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 6, // Added ID
       "question": "Passive voice: “They built a house.”",
       "options": [
         "A house was built by them.",
@@ -71,6 +78,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 7, // Added ID
       "question": "He has ___ his work.",
       "options": [
         "do",
@@ -82,6 +90,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 8, // Added ID
       "question": "Which word is a noun?",
       "options": [
         "Quickly",
@@ -93,6 +102,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 9, // Added ID
       "question": "She is ___ honest woman.",
       "options": [
         "a",
@@ -104,6 +114,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 10, // Added ID
       "question": "By next week, I ___ this book.",
       "options": [
         "will finish",
@@ -115,6 +126,7 @@ export const TestProvider = ({ children }) => {
       "subject": "English"
     },
     {
+      "id": 11, // Added ID
       "question": "First revelation was received in:",
       "options": [
         "Makkah",
@@ -126,6 +138,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 12, // Added ID
       "question": "First Surah of the Quran:",
       "options": [
         "Al-Baqarah",
@@ -137,6 +150,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 13, // Added ID
       "question": "Who compiled the Quran in one book form?",
       "options": [
         "Hazrat Umar",
@@ -148,6 +162,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 14, // Added ID
       "question": "Number of Makki Surahs:",
       "options": [
         "114",
@@ -159,6 +174,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 15, // Added ID
       "question": "Namaz was made obligatory during:",
       "options": [
         "Miraj",
@@ -170,6 +186,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 16, // Added ID
       "question": "First Islamic month:",
       "options": [
         "Safar",
@@ -181,6 +198,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 17, // Added ID
       "question": "Zakat is:",
       "options": [
         "Tax",
@@ -192,6 +210,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 18, // Added ID
       "question": "Total number of Farz in Wudu:",
       "options": [
         "2",
@@ -203,6 +222,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 19, // Added ID
       "question": "Kalma Tayyaba is also known as:",
       "options": [
         "First Kalma",
@@ -214,6 +234,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 20, // Added ID
       "question": "Qibla was changed to:",
       "options": [
         "Masjid-e-Nabvi",
@@ -225,6 +246,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Islamiat"
     },
     {
+      "id": 21, // Added ID
       "question": "Current Secretary-General of the UN (2025):",
       "options": [
         "Ban Ki-moon",
@@ -236,6 +258,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 22, // Added ID
       "question": "Host of 2024 Olympics:",
       "options": [
         "Japan",
@@ -247,6 +270,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 23, // Added ID
       "question": "Current Prime Minister of UK (2025):",
       "options": [
         "Rishi Sunak",
@@ -258,6 +282,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 24, // Added ID
       "question": "COP28 was held in:",
       "options": [
         "Egypt",
@@ -269,6 +294,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 25, // Added ID
       "question": "Country with highest inflation in 2025:",
       "options": [
         "Venezuela",
@@ -280,6 +306,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 26, // Added ID
       "question": "OIC stands for:",
       "options": [
         "Organization of Indian Culture",
@@ -291,6 +318,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 27, // Added ID
       "question": "Recently elected US President (2024):",
       "options": [
         "Joe Biden",
@@ -302,6 +330,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 28, // Added ID
       "question": "BRICS now includes:",
       "options": [
         "5 countries",
@@ -313,6 +342,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 29, // Added ID
       "question": "World Economic Forum 2025 was held in:",
       "options": [
         "Geneva",
@@ -324,6 +354,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 30, // Added ID
       "question": "Nobel Peace Prize 2024 went to:",
       "options": [
         "Greta Thunberg",
@@ -335,6 +366,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Current Affairs"
     },
     {
+      "id": 31, // Added ID
       "question": "Founder of Pakistan:",
       "options": [
         "Allama Iqbal",
@@ -346,6 +378,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 32, // Added ID
       "question": "Lahore Resolution was passed in:",
       "options": [
         "1930",
@@ -357,6 +390,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 33, // Added ID
       "question": "First Prime Minister of Pakistan:",
       "options": [
         "Muhammad Ali Jinnah",
@@ -368,6 +402,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 34, // Added ID
       "question": "First Constitution of Pakistan:",
       "options": [
         "1947",
@@ -379,6 +414,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 35, // Added ID
       "question": "Pakistan became a republic in:",
       "options": [
         "1947",
@@ -390,6 +426,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 36, // Added ID
       "question": "Indus Waters Treaty was signed in:",
       "options": [
         "1948",
@@ -401,6 +438,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 37, // Added ID
       "question": "Largest dam in Pakistan:",
       "options": [
         "Tarbela",
@@ -412,6 +450,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 38, // Added ID
       "question": "National language of Pakistan:",
       "options": [
         "Punjabi",
@@ -423,6 +462,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 39, // Added ID
       "question": "Pakistan’s nuclear tests were conducted in:",
       "options": [
         "1997",
@@ -434,6 +474,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 40, // Added ID
       "question": "Pakistan’s first female PM:",
       "options": [
         "Fatima Jinnah",
@@ -445,6 +486,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Pakistan Affairs"
     },
     {
+      "id": 41, // Added ID
       "question": "Tallest mountain in the world:",
       "options": [
         "K2",
@@ -456,6 +498,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 42, // Added ID
       "question": "Fastest animal on land:",
       "options": [
         "Lion",
@@ -467,6 +510,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 43, // Added ID
       "question": "Light travels at:",
       "options": [
         "300,000 km/s",
@@ -478,6 +522,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 44, // Added ID
       "question": "Currency of Japan:",
       "options": [
         "Won",
@@ -489,6 +534,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 45, // Added ID
       "question": "Human blood has:",
       "options": [
         "2 groups",
@@ -500,6 +546,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 46, // Added ID
       "question": "Largest organ in the body:",
       "options": [
         "Heart",
@@ -511,6 +558,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 47, // Added ID
       "question": "Brain is protected by:",
       "options": [
         "Ribs",
@@ -522,6 +570,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 48, // Added ID
       "question": "H2O is:",
       "options": [
         "Oxygen",
@@ -533,6 +582,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 49, // Added ID
       "question": "Pakistan joined UNO in:",
       "options": [
         "1945",
@@ -544,6 +594,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 50, // Added ID
       "question": "Olympic Games are held every:",
       "options": [
         "2 years",
@@ -555,6 +606,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 51, // Added ID
       "question": "4, 8, 16, 32, ?",
       "options": [
         "64",
@@ -566,6 +618,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 52, // Added ID
       "question": "Which is the odd one out?",
       "options": [
         "Apple",
@@ -577,6 +630,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 53, // Added ID
       "question": "If 2 + 3 = 13, 3 + 4 = 25, then 4 + 5 = ?",
       "options": [
         "35",
@@ -588,6 +642,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 54, // Added ID
       "question": "Complete: A, C, E, G, ?",
       "options": [
         "H",
@@ -599,6 +654,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 55, // Added ID
       "question": "Which number is missing: 7, 14, 28, __, 112?",
       "options": [
         "42",
@@ -610,6 +666,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 56, // Added ID
       "question": "Mirror image of \"SON\":",
       "options": [
         "NOS",
@@ -621,6 +678,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 57, // Added ID
       "question": "If MONDAY = 123456, then what is DAY?",
       "options": [
         "456",
@@ -632,6 +690,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 58, // Added ID
       "question": "8, 6, 9, 23, ?, 109",
       "options": [
         "45",
@@ -643,6 +702,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 59, // Added ID
       "question": "Which one does not belong?",
       "options": [
         "Circle",
@@ -654,6 +714,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 60, // Added ID
       "question": "3:9 :: 4: ?",
       "options": [
         "16",
@@ -665,6 +726,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 61, // Added ID
       "question": "Book is to Reading as Fork is to:",
       "options": [
         "Drawing",
@@ -676,6 +738,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 62, // Added ID
       "question": "12 ÷ 3(4) = ?",
       "options": [
         "16",
@@ -687,6 +750,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 63, // Added ID
       "question": "Clock: Time :: Thermometer: ?",
       "options": [
         "Heat",
@@ -698,6 +762,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 64, // Added ID
       "question": "Find next: 2, 6, 12, 20, ?",
       "options": [
         "30",
@@ -709,6 +774,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 65, // Added ID
       "question": "81 is to 9 as 64 is to ?",
       "options": [
         "6",
@@ -720,6 +786,7 @@ export const TestProvider = ({ children }) => {
       "subject": "General Knowledge"
     },
     {
+      "id": 66, // Added ID
       "question": "Constitution of 1973 was passed on:",
       "options": [
         "March 23",
@@ -731,6 +798,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 67, // Added ID
       "question": "Number of Articles in Constitution:",
       "options": [
         "240",
@@ -742,6 +810,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 68, // Added ID
       "question": "Objective Resolution passed in:",
       "options": [
         "1949",
@@ -753,6 +822,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 69, // Added ID
       "question": "Constitution 1973 was enforced on:",
       "options": [
         "August 14, 1973",
@@ -764,6 +834,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 70, // Added ID
       "question": "18th Amendment passed in:",
       "options": [
         "2008",
@@ -775,6 +846,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 71, // Added ID
       "question": "Pakistan is declared as:",
       "options": [
         "Democratic",
@@ -786,6 +858,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 72, // Added ID
       "question": "Fundamental rights are in:",
       "options": [
         "Chapter I",
@@ -797,6 +870,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 73, // Added ID
       "question": "Who can dissolve the National Assembly?",
       "options": [
         "President",
@@ -808,6 +882,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 74, // Added ID
       "question": "Supreme Court is under which Article?",
       "options": [
         "175",
@@ -819,6 +894,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 75, // Added ID
       "question": "Highest law in Pakistan:",
       "options": [
         "Quran",
@@ -830,6 +906,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 76, // Added ID
       "question": "Who is Head of State?",
       "options": [
         "PM",
@@ -841,6 +918,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 77, // Added ID
       "question": "Pakistan is a ___ federation.",
       "options": [
         "Presidential",
@@ -852,6 +930,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 78, // Added ID
       "question": "Amendment for women's reserved seats:",
       "options": [
         "16th",
@@ -863,6 +942,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 79, // Added ID
       "question": "Article 25 relates to:",
       "options": [
         "Freedom of Speech",
@@ -874,6 +954,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 80, // Added ID
       "question": "Tenure of National Assembly:",
       "options": [
         "4 years",
@@ -885,6 +966,7 @@ export const TestProvider = ({ children }) => {
       "subject": "Constitution of Pakistan"
     },
     {
+      "id": 81, // Added ID
       "question": "The Elections Act was enacted in:",
       "options": [
         "2016",
@@ -896,6 +978,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 82, // Added ID
       "question": "The main body responsible for elections:",
       "options": [
         "SC",
@@ -907,6 +990,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 83, // Added ID
       "question": "Which Section deals with delimitation?",
       "options": [
         "17",
@@ -918,6 +1002,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 84, // Added ID
       "question": "ECP stands for:",
       "options": [
         "Election Coordination Panel",
@@ -929,6 +1014,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 85, // Added ID
       "question": "The term of Election Commissioner is:",
       "options": [
         "4 years",
@@ -940,6 +1026,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 86, // Added ID
       "question": "Elections must be held within how many days after assembly dissolution?",
       "options": [
         "30",
@@ -951,6 +1038,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 87, // Added ID
       "question": "Minimum age to contest National Assembly election:",
       "options": [
         "18",
@@ -962,6 +1050,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 88, // Added ID
       "question": "Which body finalizes the voter list?",
       "options": [
         "NADRA",
@@ -973,6 +1062,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 89, // Added ID
       "question": "Who appoints the CEC?",
       "options": [
         "Prime Minister",
@@ -984,6 +1074,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 90, // Added ID
       "question": "Which house confirms CEC?",
       "options": [
         "Senate",
@@ -995,6 +1086,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 91, // Added ID
       "question": "Election dispute appeals go to:",
       "options": [
         "President",
@@ -1006,6 +1098,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 92, // Added ID
       "question": "Polling day must be:",
       "options": [
         "Friday",
@@ -1017,6 +1110,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 93, // Added ID
       "question": "Use of fake vote results in:",
       "options": [
         "Fine",
@@ -1028,6 +1122,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 94, // Added ID
       "question": "Every citizen of age ___ is eligible to vote.",
       "options": [
         "16",
@@ -1039,6 +1134,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 95, // Added ID
       "question": "Voter can be disqualified for:",
       "options": [
         "Criminal record",
@@ -1050,6 +1146,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 96, // Added ID
       "question": "Election symbols are allotted by:",
       "options": [
         "Supreme Court",
@@ -1061,6 +1158,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 97, // Added ID
       "question": "Vote casting is:",
       "options": [
         "Verbal",
@@ -1072,6 +1170,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 98, // Added ID
       "question": "Which form is used for nomination?",
       "options": [
         "Form 32",
@@ -1083,6 +1182,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 99, // Added ID
       "question": "Who is a 'Returning Officer'?",
       "options": [
         "PM",
@@ -1094,6 +1194,7 @@ export const TestProvider = ({ children }) => {
       "subject": "The Elections Act, 2017"
     },
     {
+      "id": 100, // Added ID
       "question": "Electoral Rolls are prepared under:",
       "options": [
         "ECP Act",
@@ -1123,9 +1224,9 @@ export const TestProvider = ({ children }) => {
   }, [questions.length]); // Depend on questions.length to re-initialize userAnswers correctly
 
   return (
-    <TestContext.Provider value={{ 
-      questions, 
-      isAuthenticated, 
+    <TestContext.Provider value={{
+      questions,
+      isAuthenticated,
       setIsAuthenticated,
       isTestCompleted,
       setIsTestCompleted,

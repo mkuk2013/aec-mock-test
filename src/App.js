@@ -156,10 +156,11 @@ const Header = () => {
 };
 
 // 3. Question Component
-// *** CHANGE 1: Added 'questionIndex' to props ***
+// *** FIX APPLIED: Added 'questionIndex' to props and used it in onChange ***
 const Question = ({ question, selectedOption, onOptionSelect, questionIndex }) => {
   return (
     <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md mb-6 border border-gray-200 dark:border-slate-700 transition-all duration-300 hover:shadow-lg">
+      {/* Ensure question.id is a valid number from your TestContext.js */}
       <p className="text-lg sm:text-xl font-semibold mb-4 text-gray-800 dark:text-white">Q{question.id}. {question.question}</p>
       <div className="space-y-3">
         {question.options.map((option, index) => (
@@ -176,7 +177,7 @@ const Question = ({ question, selectedOption, onOptionSelect, questionIndex }) =
               name={`question-${question.id}`}
               value={index}
               checked={selectedOption === index}
-              onChange={() => onOptionSelect(questionIndex, index)} // *** CHANGE 2: Used 'questionIndex' here ***
+              onChange={() => onOptionSelect(questionIndex, index)} // *** FIXED: Using questionIndex for correct array update ***
               className="form-radio h-5 w-5 text-blue-600 dark:text-blue-500 border-gray-300 dark:border-slate-500 focus:ring-blue-500 dark:focus:ring-400"
             />
             <span className="ml-3 text-base sm:text-lg text-gray-700 dark:text-gray-300">{option}</span>
@@ -221,14 +222,14 @@ const NavigationButtons = ({
       {isLastQuestion ? (
         <Button
           onClick={onSubmit}
-          className="flex-1 py-3 px-6 rounded-lg bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-white font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md"
+          className="flex-1 py-3 px-6 rounded-lg bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-white font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
         >
           Submit Test
         </Button>
       ) : (
         <Button
           onClick={onNext}
-          className="flex-1 py-3 px-6 rounded-lg bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md"
+          className="flex-1 py-3 px-6 rounded-lg bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white font-semibold transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
         >
           Next
         </Button>
@@ -329,11 +330,11 @@ const TestScreen = () => {
     return () => clearInterval(timerInterval);
   }, [handleSubmit]);
 
-  // *** CHANGE 3: Changed 'questionId' to 'questionIndex' and removed '- 1' ***
+  // *** FIXED: Changed 'questionId' to 'questionIndex' and removed '- 1' ***
   const handleOptionSelect = useCallback((questionIndex, selectedOptionIndex) => {
     setUserAnswers((prevAnswers) => {
       const newAnswers = [...prevAnswers];
-      newAnswers[questionIndex] = selectedOptionIndex;
+      newAnswers[questionIndex] = selectedOptionIndex; // Direct use of 0-based index
       return newAnswers;
     });
   }, [setUserAnswers]);
@@ -379,7 +380,7 @@ const TestScreen = () => {
             question={questions[currentQuestionIndex]}
             selectedOption={userAnswers[currentQuestionIndex]}
             onOptionSelect={handleOptionSelect}
-            questionIndex={currentQuestionIndex} // *** CHANGE 4: Passed 'currentQuestionIndex' as 'questionIndex' ***
+            questionIndex={currentQuestionIndex} // *** FIXED: Passed 'currentQuestionIndex' as 'questionIndex' ***
           />
           <NavigationButtons
             currentQuestionIndex={currentQuestionIndex}
