@@ -131,7 +131,6 @@ const LoginScreen = () => {
 };
 
 // 2. Header Component
-// 2. Header Component
 const Header = () => {
   return (
     <header className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 text-gray-800 dark:text-white p-4 flex items-center fixed top-0 left-0 right-0 z-20 shadow-lg backdrop-blur-sm bg-white/95 dark:bg-slate-800/95 transition-colors duration-300">
@@ -157,7 +156,8 @@ const Header = () => {
 };
 
 // 3. Question Component
-const Question = ({ question, selectedOption, onOptionSelect }) => {
+// *** CHANGE 1: Added 'questionIndex' to props ***
+const Question = ({ question, selectedOption, onOptionSelect, questionIndex }) => {
   return (
     <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-md mb-6 border border-gray-200 dark:border-slate-700 transition-all duration-300 hover:shadow-lg">
       <p className="text-lg sm:text-xl font-semibold mb-4 text-gray-800 dark:text-white">Q{question.id}. {question.question}</p>
@@ -176,7 +176,7 @@ const Question = ({ question, selectedOption, onOptionSelect }) => {
               name={`question-${question.id}`}
               value={index}
               checked={selectedOption === index}
-              onChange={() => onOptionSelect(question.id, index)}
+              onChange={() => onOptionSelect(questionIndex, index)} // *** CHANGE 2: Used 'questionIndex' here ***
               className="form-radio h-5 w-5 text-blue-600 dark:text-blue-500 border-gray-300 dark:border-slate-500 focus:ring-blue-500 dark:focus:ring-400"
             />
             <span className="ml-3 text-base sm:text-lg text-gray-700 dark:text-gray-300">{option}</span>
@@ -329,10 +329,11 @@ const TestScreen = () => {
     return () => clearInterval(timerInterval);
   }, [handleSubmit]);
 
-  const handleOptionSelect = useCallback((questionId, selectedOptionIndex) => {
+  // *** CHANGE 3: Changed 'questionId' to 'questionIndex' and removed '- 1' ***
+  const handleOptionSelect = useCallback((questionIndex, selectedOptionIndex) => {
     setUserAnswers((prevAnswers) => {
       const newAnswers = [...prevAnswers];
-      newAnswers[questionId - 1] = selectedOptionIndex;
+      newAnswers[questionIndex] = selectedOptionIndex;
       return newAnswers;
     });
   }, [setUserAnswers]);
@@ -378,6 +379,7 @@ const TestScreen = () => {
             question={questions[currentQuestionIndex]}
             selectedOption={userAnswers[currentQuestionIndex]}
             onOptionSelect={handleOptionSelect}
+            questionIndex={currentQuestionIndex} // *** CHANGE 4: Passed 'currentQuestionIndex' as 'questionIndex' ***
           />
           <NavigationButtons
             currentQuestionIndex={currentQuestionIndex}
