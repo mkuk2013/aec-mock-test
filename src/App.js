@@ -81,7 +81,7 @@ const LoginScreen = () => {
   const navigate = useNavigate();
   const { setIsAuthenticated } = useTest();
 
-  const correctPassword = "aectestbymk";
+  const correctPassword = "aectestbyayesharani";
 
   const handleLogin = () => {
     if (password === correctPassword) {
